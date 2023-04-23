@@ -1,7 +1,19 @@
+import { Routes, Route } from "react-router-dom";
+import { Container } from "react-bootstrap";
+import About from "./pages/About";
+import Store from "./pages/Store";
+import Home from "./pages/Home";
+
 function App() {
   return (
-    <div>App</div>
-  )
+    <Container>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/store" element={<Store />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Container>
+  );
 }
 
-export default App
+export default App;
