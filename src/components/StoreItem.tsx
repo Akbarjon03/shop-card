@@ -26,9 +26,9 @@ export function StoreItem({ id, name, price, imgUrl }: StoreItemProps) {
         <div className="mt-auto">
           {quantity === 0 ? (
             <Button className="w-100">Add to Card</Button>
-          ) : (
+          ) : 
             <div className="d-flex align-item-center flex-column" style={{ gap:".5rem" }}> uuuu </div>
-          )}
+          }
         </div>
       </Card.Body>
     </Card>
