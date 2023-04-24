@@ -1,4 +1,4 @@
-import { Routes, Route, BrowserRouter } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { Container } from "react-bootstrap";
 import About from "./pages/About";
 import Store from "./pages/Store";
@@ -11,13 +11,11 @@ function App() {
     <ShoppingCartProvider>
       <Navbar />
       <Container>
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/store" element={<Store />} />
-            <Route path="/about" element={<About />} />
-          </Routes>
-        </BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/store" element={<Store />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
       </Container>
     </ShoppingCartProvider>
   );
