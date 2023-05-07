@@ -1,4 +1,4 @@
-import { Button, Container, Nav, Navbar as NavbarBs } from "react-bootstrap";
+import { Button, Container, Nav, NavDropdown, Navbar as NavbarBs } from "react-bootstrap";
 import { NavLink } from "react-router-dom";
 import { useShoppingCart } from "../context/ShoppingCartContext";
 
@@ -17,6 +17,9 @@ function Navbar() {
           <Nav.Link to="/about" as={NavLink}>
             About
           </Nav.Link>
+          <NavDropdown title="Change language" id="basic-nav-dropdown" className="justify-content-end">
+            <NavDropdown.Item href="">Russian</NavDropdown.Item>
+          </NavDropdown>
         </Nav>
         {cartQuantity > 0 && (
           <Button
